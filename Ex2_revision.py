@@ -211,6 +211,12 @@ print("-------------------------------------------\n"
 #    def calculate_ticket_cost(num_seats, price_per_seat):
 #        total = num_seats * price_per_seat
 #        return total
+price_per_seat = 20
+num_seats = 3
+def calculate_ticket_cost(num_seats, price_per_seat):
+    total = num_seats * price_per_seat
+    return total
+
 #
 # 2. Create a function called 'apply_discount' that:
 #    - Takes TWO parameters: total, discount_percent
@@ -218,6 +224,11 @@ print("-------------------------------------------\n"
 #    - Subtracts the discount from the total
 #    - Returns the new total
 #
+def apply_discount(total, discount_percent):
+    discount_amount = (total * (discount_percent/100))
+    new_total = (total - discount_amount)
+    return new_total
+
 #    HINT: new_total = total - (total * (discount_percent / 100))
 #
 # 3. Create a function called 'display_price' that:
@@ -225,6 +236,20 @@ print("-------------------------------------------\n"
 #    - Prints: "Total cost: £[price]"
 #    - (Just prints, doesn't return anything)
 #
+price = 20
+def display_price(new_total):
+    print(f"Total cost: £{price}")
+
+ticket_cost = calculate_ticket_cost
+discount = apply_discount
+ticket_price = display_price
+
+calculate_ticket_cost(ticket_cost, price_per_seat)
+apply_discount (discount)
+display_price(ticket_price)
+
+
+
 # 4. TEST your functions:
 #    - Create a variable: seats = 3
 #    - Calculate cost: cost = calculate_ticket_cost(seats, 12)
