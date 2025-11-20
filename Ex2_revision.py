@@ -60,6 +60,12 @@ print("-------------------------------------------\n"
 #    def print_welcome(name):
 #        print(f"Welcome to the Cinema Booking System, {name}!")
 #
+
+def print_welcome(name):
+    print(f"Welcome to the Cinema booking system, {name}!")
+
+print_welcome("Jack")
+
 # 2. Create a function called 'print_movie_info' that:
 #    - Takes TWO parameters: title, duration
 #    - Prints:
