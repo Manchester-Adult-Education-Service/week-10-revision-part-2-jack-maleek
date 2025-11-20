@@ -60,11 +60,23 @@ print("-------------------------------------------\n"
 #    def print_welcome(name):
 #        print(f"Welcome to the Cinema Booking System, {name}!")
 #
+
+def print_welcome(name):
+    print(f"Welcome to the Cinema booking system, {name}!")
+
+print_welcome("Jack")
+
 # 2. Create a function called 'print_movie_info' that:
 #    - Takes TWO parameters: title, duration
 #    - Prints:
 #      "Movie: [title]"
 #      "Duration: [duration] minutes"
+
+def print_movie_info(title, duration):
+    print(f"Movie: {title}\nDuration: {duration} minutes")
+
+print_movie_info("Lord of the Rings", "60")
+
 #
 # 3. Create a function called 'print_booking_summary' that:
 #    - Takes THREE parameters: name, movie, seats
@@ -75,6 +87,18 @@ print("-------------------------------------------\n"
 #      "Seats: [seats]"
 #      "-----------------------"
 #
+
+def print_booking_summary(name, movie, seats):
+    print(f"""--- Booking Summary ---
+    Customer: {name}
+    Movie: {movie}
+    Seats: {seats}
+    -----------------------
+    """)
+
+print_booking_summary("Jack", "Four Lions", 2)
+
+
 # 4. Test your functions by calling them:
 #    - print_welcome("Sarah")
 #    - print_movie_info("The Matrix", 136)
@@ -82,7 +106,9 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
-
+print_welcome("Maleek")
+print_movie_info("Lord of the ring", 70)
+print_booking_summary("Maleek", "Lord of the ring", 3)
 
 
 
@@ -110,6 +136,11 @@ print("-------------------------------------------\n"
 #    - Uses input() to ask: "Enter your name: "
 #    - RETURNS the answer
 #
+
+def get_customer_name():
+    name = input("What is your name?\n")
+    return name
+
 #    EXAMPLE:
 #    def function_name_here():
 #        name = input("Enter your name: ")
@@ -119,11 +150,21 @@ print("-------------------------------------------\n"
 #    - Uses input() to ask: "Enter movie title: "
 #    - Returns the answer
 #
+
+def get_movie_title():
+    move_title = input("Enter the movie name:\n")
+    return move_title
+
 # 3. Create a function called 'get_number_of_seats' that:
 #    - Uses input() to ask: "How many seats? "
 #    - Converts the input to an integer using int()
 #    - Returns the integer
 #
+
+def get_number_of_seats():
+    seats_no = int(input("How many seats?\n"))
+    return seats_no
+
 #    HINT: return int(input("How many seats? "))
 #
 # 4. TEST your functions:
@@ -135,8 +176,11 @@ print("-------------------------------------------\n"
 # Note: Only the DRIVER should be typing!
 # Write your code below:
 
+customer = get_customer_name()
+movie = get_movie_title()
+seats = get_number_of_seats()
 
-
+print_booking_summary(customer, movie, seats)
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
@@ -167,6 +211,12 @@ print("-------------------------------------------\n"
 #    def calculate_ticket_cost(num_seats, price_per_seat):
 #        total = num_seats * price_per_seat
 #        return total
+price_per_seat = 20
+num_seats = 3
+def calculate_ticket_cost(num_seats, price_per_seat):
+    total = num_seats * price_per_seat
+    return total
+
 #
 # 2. Create a function called 'apply_discount' that:
 #    - Takes TWO parameters: total, discount_percent
@@ -174,6 +224,11 @@ print("-------------------------------------------\n"
 #    - Subtracts the discount from the total
 #    - Returns the new total
 #
+def apply_discount(total, discount_percent):
+    discount_amount = (total * (discount_percent/100))
+    new_total = (total - discount_amount)
+    return new_total
+
 #    HINT: new_total = total - (total * (discount_percent / 100))
 #
 # 3. Create a function called 'display_price' that:
@@ -181,6 +236,20 @@ print("-------------------------------------------\n"
 #    - Prints: "Total cost: £[price]"
 #    - (Just prints, doesn't return anything)
 #
+price = 20
+def display_price(new_total):
+    print(f"Total cost: £{price}")
+
+ticket_cost = calculate_ticket_cost
+discount = apply_discount
+ticket_price = display_price
+
+calculate_ticket_cost(ticket_cost, price_per_seat)
+apply_discount (discount)
+display_price(ticket_price)
+
+
+
 # 4. TEST your functions:
 #    - Create a variable: seats = 3
 #    - Calculate cost: cost = calculate_ticket_cost(seats, 12)
