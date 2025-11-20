@@ -106,7 +106,9 @@ print_booking_summary("Jack", "Four Lions", 2)
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
-
+print_welcome("Maleek")
+print_movie_info("Lord of the ring", 70)
+print_booking_summary("Maleek", "Lord of the ring", 3)
 
 
 
