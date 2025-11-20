@@ -71,6 +71,12 @@ print_welcome("Jack")
 #    - Prints:
 #      "Movie: [title]"
 #      "Duration: [duration] minutes"
+
+def print_movie_info(title, duration):
+    print(f"Movie: {title}\nDuration: {duration} minutes")
+
+print_movie_info("Lord of the Rings", "60")
+
 #
 # 3. Create a function called 'print_booking_summary' that:
 #    - Takes THREE parameters: name, movie, seats
