@@ -87,6 +87,18 @@ print_movie_info("Lord of the Rings", "60")
 #      "Seats: [seats]"
 #      "-----------------------"
 #
+
+def print_booking_summary(name, movie, seats):
+    print(f"""--- Booking Summary ---
+    Customer: {name}
+    Movie: {movie}
+    Seats: {seats}
+    -----------------------
+    """)
+
+print_booking_summary("Jack", "Four Lions", 2)
+
+
 # 4. Test your functions by calling them:
 #    - print_welcome("Sarah")
 #    - print_movie_info("The Matrix", 136)
