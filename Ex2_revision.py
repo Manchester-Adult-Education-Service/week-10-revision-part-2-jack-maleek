@@ -136,6 +136,11 @@ print("-------------------------------------------\n"
 #    - Uses input() to ask: "Enter your name: "
 #    - RETURNS the answer
 #
+
+def get_customer_name():
+    name = input("What is your name?\n")
+    return name
+
 #    EXAMPLE:
 #    def function_name_here():
 #        name = input("Enter your name: ")
@@ -145,11 +150,21 @@ print("-------------------------------------------\n"
 #    - Uses input() to ask: "Enter movie title: "
 #    - Returns the answer
 #
+
+def get_movie_title():
+    move_title = input("Enter the movie name:\n")
+    return move_title
+
 # 3. Create a function called 'get_number_of_seats' that:
 #    - Uses input() to ask: "How many seats? "
 #    - Converts the input to an integer using int()
 #    - Returns the integer
 #
+
+def get_number_of_seats():
+    seats_no = int(input("How many seats?\n"))
+    return seats_no
+
 #    HINT: return int(input("How many seats? "))
 #
 # 4. TEST your functions:
@@ -161,8 +176,11 @@ print("-------------------------------------------\n"
 # Note: Only the DRIVER should be typing!
 # Write your code below:
 
+customer = get_customer_name()
+movie = get_movie_title()
+seats = get_number_of_seats()
 
-
+print_booking_summary(customer, movie, seats)
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
